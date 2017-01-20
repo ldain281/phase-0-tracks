@@ -1,5 +1,17 @@
-img {
+.Back {
+    margin: 200px 25px 25px 200px;
+    z-index: 0;
     position: absolute;
-    left: 100px;
-    top: 150px;
+}
+.Front {
+    margin: 300px 25px 25px 240px;
+    z-index: 1;
+    position: absolute;
+}
+.Top {
+
+    margin: 110px 25px 25px 180px;
+    z-index: 2;
+    position: absolute;
+
 }
