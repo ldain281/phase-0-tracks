@@ -1,0 +1,20 @@
+Module 4.2: Release 0
+- press button that displays upward-pointing icon
+- when metal doors open, walk through open doors until wall of room is reached
+- turn around 180 degrees and walk, stopping at button panel within room
+- view the numbers on the buttons on the panel
+- when pressing button, floor x = button(x)
+
+Module 4.2: Release 1 - Brush teeth
+- move forward until counter is reached
+- look down and rotate head 30 degrees left
+- move left arm hand one foot left, lift up hand 6 inches, move hand forward 1 foot, open hand and grab white tube
+- move left hand to front of body
+- move right hand to front of body and same height as tube
+- rotate hand counterclockwise, release and grab, repeat 3 times.
+- move right arm one foot to left, select and grab horizontal red and white plastic handle with left hand
+- 
+- lift until hand height = mouth height
+- rotate wrist clockwise until rod angle = 0 degrees
+- rotate hand clockwise until grey bristles on rod are perpendicular to mouth and point to mouth
+- open mouth, lower bottom lip and move rod toward teeth until brush touches teeth
