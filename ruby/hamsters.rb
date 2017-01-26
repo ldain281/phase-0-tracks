@@ -14,16 +14,16 @@ volume_level = gets.chomp.to_i
 
 
 puts "What is you hamster fur color?"
-fur_color = gets.chomp
+fur_color = gets.chomp	
 
 
 puts "Is this hamster and adoption candidate?(y/n)"
 adoption_candidate = gets.chomp
 
-if adoption_candidate == "y" || "yes"
-	adoption_candidate = true
+if adoption_candidate == "y" || adoption_candidate == "yes"
+  adoption_candidate = true
 else
-	adoption_candidate = false
+  adoption_candidate = false
 end
 
 
