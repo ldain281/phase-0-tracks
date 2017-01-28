@@ -1,5 +1,5 @@
 #define encrypt method
-#seperate each character or letter
+#separate each character or letter
 #add next method to each letter and save it
 
 
