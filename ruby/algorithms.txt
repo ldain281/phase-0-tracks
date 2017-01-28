@@ -5,16 +5,39 @@ Module 4.2: Release 0
 - view the numbers on the buttons on the panel
 - when pressing button, floor x = button(x)
 
-Module 4.2: Release 1 - Brush teeth
-- move forward until counter is reached
+Module 4.2: Release 1 - Even robots get cavities
+- walk forward until counter is reached
 - look down and rotate head 30 degrees left
-- move left arm hand one foot left, lift up hand 6 inches, move hand forward 1 foot, open hand and grab white tube
-- move left hand to front of body
+- move left arm 12 inches left, lift hand up 6 inches, move hand forward 1 foot, open hand and grab white tube
+- move left hand to front of body and rotate head to center and look at tube
+- rotate left hand so small end of tube points to the right.
 - move right hand to front of body and same height as tube
-- rotate hand counterclockwise, release and grab, repeat 3 times.
-- move right arm one foot to left, select and grab horizontal red and white plastic handle with left hand
-- 
-- lift until hand height = mouth height
-- rotate wrist clockwise until rod angle = 0 degrees
-- rotate hand clockwise until grey bristles on rod are perpendicular to mouth and point to mouth
-- open mouth, lower bottom lip and move rod toward teeth until brush touches teeth
+- with right hand fingers, grab small end of tube, rotate right hand counterclockwise, release and grab small end of tube, repeat 3 times and then pull to the right.
+- lower right hand and open fingers
+- move right arm one foot to right, rotate head to view 30 degrees to right, select and grab with right hand horizontal red and white plastic handle
+- move right hand back to center in front of body
+- with right had rotate white plastic handle parallel to body and vertically 0 degrees, pointing white bristles upward
+- move left hand so pointed end of tube is 1/4 inch above bristles.
+- at 1/4 speed move fingers together, depressing tube 1/8 inch
+- lift right hand until hand height = mouth height
+- rotate hand clockwise until bristles on rod are perpendicular to mouth and point to mouth
+- open mouth, smile and move rod toward teeth until bristles touch teeth = position 1
+- substep1: make 10 counterclockwise rotations of rod, each of 1/8 inch radius while bristles touch teeth
+- substep2: move right hand 1 inch to left, changing horoizontal angle to of rod 30 degrees away from head and maintaining 0 degrees vertical and maintaining contact with bristles on teeth. 
+- repeat substep1 followed by substep2, 3 times
+- return to postion 1
+substep4: maintatin bristles on teeth, rotate rod vertically 180 degrees
+- substep3: move right hand 1 inch to right, changing horoizontal angle to of rod 30 degrees away from head and maintaining 0 degrees vertical and maintaining contact with bristles on teeth.
+- repeat substep1 followed by substep3, 3 times
+- open mouth 1 inch
+- maintining bristles on teeth, rotate brush head over and to other side of teeth on lower jaw
+- repeat substep1
+- substep5: move right hand 1 inch to left, changing horoizontal angle to of rod 30 degrees closer to head and maintaining 0 degrees vertical and maintaining contact with bristles on teeth.
+- repeat sustep1 followed by substep5 three times.
+- repeat substep4
+- repeat substep2 followed by substep1 three times
+- move brisltes upward to inside teeth of upper jaw
+- repeat substep5 and substep1 three times
+- repeat substep4
+- repeat substep3 and substep1 three times.
+- place plastic rod and tube to original location, spit into sink
