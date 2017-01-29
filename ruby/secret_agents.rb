@@ -1,5 +1,5 @@
 #define encrypt method
-#separate each character or letter
+#seperate each character or letter
 #add next method to each letter and save it
 
 
@@ -46,22 +46,36 @@ def decrypt (encrypted_pass)
 	encrypted_pass
 end	
 
-puts "Would you like to decrypt or encrypt a password?"
-option = gets.chomp
-if (option == "encrypt")
-	puts "Enter your password for encryption"
-	password = gets.chomp
-	puts "Here is your encrypted password:"
-	puts encrypt(password)
-else (option == "decrypt")
-	puts "Enter your password for decryption"
-	password = gets.chomp
-	puts "Here is your decrypted password:"
-	puts decrypt(password)
-end
 
 
 #DRIVING CODE 
+
+#Ask for option 
+#Process the response
+#call the apropriate method for encrypt or decrypt
+#print the processed info 
+program = true 
+while program == true do 
+	puts "Would you like to decrypt or encrypt a password? (to exit, type done)"
+	option = gets.chomp
+	if (option == "encrypt")
+		puts "Enter your password for encryption"
+		password = gets.chomp
+		puts "Here is your encrypted password:"
+		puts encrypt(password)
+	elsif (option == "decrypt")
+		puts "Enter your password for decryption"
+		password = gets.chomp
+		puts "Here is your decrypted password:"
+		puts decrypt(password)
+	elsif (option == "done")
+		program = false
+		puts "Thanks for coming!"
+	else 
+		puts "Uppss! Didn't understood try again"
+	end
+end
+
 
 
 
