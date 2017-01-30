@@ -1,3 +1,4 @@
+
 #WHR
 total = 0
 full_name = ""
@@ -54,3 +55,9 @@ else
 end
 count -= 1
 end
+=======
+puts "What is your name?"
+puts "How old are you?"
+puts "What year were you born?"
+puts "Our company cafeteria serves garlic bread. Should we order some for you?(y/n)"
+puts "Would you like to enroll in the company's health insurance?"
