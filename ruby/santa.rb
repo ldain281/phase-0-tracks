@@ -1,5 +1,6 @@
 class Santa
-
+attr_reader :age, :ethnicity,
+attr_accessor :gender
 	def speak
 	puts "Ho, ho, ho! Haaaapy holidays!"
 	end
@@ -10,36 +11,44 @@ class Santa
 
 	def initialize(gender, ethnicity)
 	puts "Initializing Santa instance..."
-	@gender = gender
-	@ethnicity = ethnicity
+		@gender = gender
+		@ethnicity = ethnicity
+		@age = 0
+	end
+	def reindeer_ranking
+		@reindeers = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+	end
+	# def name
+	# 	@name
+	# end
+	def celebrate_birthday(age)
+		@age = @age + 1
 	end
 
-	def celebrate_birthday(age)
-		@age = age + 1
+	def get_mad_at(reindeer_name)
+	@reindeers	
+	# 	@reindeers.each.delete {|name|}
+	# 	@reindeers.map.last {|name|}
+
 	end
-	def get_mad_at(reindeer_ranking)
-		@get_mad_at = get_mad_at
-	end
-	def gender
-		@gender
-	end
-	def age
-		@age
-	end
-	def ethnicity
-		@ethnicity
-	end
+
 end
+#relase 0
 st_nick = Santa.new("female", "Native American")
 st_nick.speak
 st_nick.eat_milk_and_cookies("sugar cookie")
-reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-age = 0
+st_nick.celebrate_birthday(0)
+st_nick.reindeer_ranking
+st_nick.get_mad_at("Vixen")
 santas = []
-santas << Santa.new("agender", "black")
-santas << Santa.new("female", "Latino")
-santas << Santa.new("bigender", "white")
-santas << Santa.new("male", "Japanese")
-santas << Santa.new("female", "prefer not to say")
-santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
-santas << Santa.new("N/A", "N/A")
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+example_genders.length.times do |i|
+  santas << Santa.new(example_genders[i], example_ethnicities[i])
+end
+
+
+#felease 4 santacom
+# Use our array of example genders and an array of example ethnicities
+# Set your new Santa's age to a random number between 0 and 140.
+# No need to store your Santas in a data structure, but your program should print out the attributes of each Santa using the instance methods that give you access to that data.
