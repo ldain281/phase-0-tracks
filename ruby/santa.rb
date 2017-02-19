@@ -1,5 +1,5 @@
 class Santa
-	#release3 getters and setters
+	#release3 refactor getters and setters
 		attr_reader :age, :ethnicity
 		attr_accessor :gender
 	def speak
