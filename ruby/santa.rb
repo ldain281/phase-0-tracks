@@ -29,7 +29,7 @@ class Santa
 		p @reindeer_ranking
 	end
 end
-#relase 0
+#release 0
 st_nick = Santa.new("female", "Native American", 0)
 st_nick.speak
 st_nick.eat_milk_and_cookies("sugar cookie")
@@ -41,6 +41,7 @@ example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer n
 #   santas << Santa.new(example_genders[i], example_ethnicities[i])
 # end
 # santas[2]
+
 #release2
 st_nick.celebrate_birthday(0)
 st_nick.get_mad_at("Vixen", 4)
