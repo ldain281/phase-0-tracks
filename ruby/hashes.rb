@@ -3,18 +3,7 @@
 # keys as :symbols
 
 
-Intdesign_hash = {
-# name = "Client name"
-# age = "Age"
-# address = "Address"
-# phone = "Phone"
-# email = "Email"
-# children = "Children"
-# decor_theme = "Decor theme"
-# description = "Description"
-# bedrooms = "Bedrooms"
-# bathrooms = "Bathrooms"
-}
+Intdesign_hash = {}
 # Convert any user input to the appropriate data type.
 #questions for client:
 print "Client Name: "
@@ -60,3 +49,4 @@ print "Which field from the above list would you like to update or add? Enter 'n
 	puts "Here are the updated client details:"
 	p Intdesign_hash
 end
+
