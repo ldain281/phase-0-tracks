@@ -1,7 +1,6 @@
-# program for int. designer to enter client details
+# 5.2 Release3 - program for int. designer to enter client details
 # prompt user for name, age, address, phone number, email, number of children, decor theme, structure description, number of bedrooms, number of bathrooms
 # keys as :symbols
-
 
 Intdesign_hash = {}
 # Convert any user input to the appropriate data type.
