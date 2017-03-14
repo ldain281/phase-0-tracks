@@ -1,7 +1,9 @@
 class Santa
+
 	#release3 refactor getters and setters
 		attr_reader :age, :ethnicity
 		attr_accessor :gender
+
 	def speak
 	puts "Ho, ho, ho! Haaaapy holidays!"
 	end
@@ -14,6 +16,7 @@ class Santa
 	puts "Initializing Santa instance..."
 		@gender = gender
 		@ethnicity = ethnicity
+
 		@age = age
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 	end
@@ -27,8 +30,11 @@ class Santa
 		@reindeer_ranking.push(name)
 		@reindeer_ranking.delete_at(rank)
 		p @reindeer_ranking
+
 	end
+
 end
+
 #release 0
 st_nick = Santa.new("female", "Native American", 0)
 st_nick.speak
@@ -57,5 +63,4 @@ st_nick.get_mad_at("Vixen", 4)
     puts "Creating new Santa"
     santas << Santa.new(example_genders.sample, example_ethnicities.sample, rand(100))
 end
-
 
