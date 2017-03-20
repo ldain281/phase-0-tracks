@@ -1,46 +1,48 @@
-#Release0
-# Method that takes an array of integers and an integer to search for. 
-ages_arr = [18, 50, 21, 45, 33, 65, 12]
-    
- def search_array(ages_arr, years)
-    ages_new = []
-    found = false
- # fill new array with each item to compare with search integer
-    ages_arr.each do |age|
-        ages_new << age
-        if age == years
-            found = true
-            break
-        end
-    end
-# Returns the index of the item or nil if the integer is not present in array.
-    if found == true
-        return ages_new.length - 1
-    else
-        return nil
-    end
- end
- #driving code
- p search_array(ages_arr, 20)
- p search_array(ages_arr, 21)
+  #Release0
+  # Method that takes array of integers and an integer to search for. 
+  # Array of integers:
+  ages_arr = [18, 50, 21, 45, 33, 65, 12]
+  
+   def search_array(ages_arr, years)
+      found = false
+   # iterate through array to compare with searched integer
+      ages_arr.each do |age|
+          if age == years
+              found = true
+              break
+          end
+      end
+  # Return index of the found integer item or nil if the integer is not present in array.
+      if found == true
+          return ages_arr.find_index(years)
+      else
+          return nil
+      end
+   end
+   #driving code
+   p search_array(ages_arr, 20)
+   p search_array(ages_arr, 21)
+  p search_array(ages_arr, 33)
 
 
-#Release 1: Calculate Fibonacci Numbers
-def fib(number)
-   fibonacci = [0,1]
-   n = number - 2
-   a = 0
-   b = 1
- n.times do
-   num = a
-   a = b
-   b = num + b
+  #Release 1: Calculate Fibonacci Numbers
+  def fib(number)
+    #start with 0 and 1
+     fibonacci = [0,1]
+     n = number - 2
+     a = 0
+     b = 1
+   n.times do
+     num = a
+     a = b
+     b += num
    fibonacci << b
    end
        return fibonacci
  end
  
  p fib(6)
+ p fib(9)
  p fib(100).last
 
 
