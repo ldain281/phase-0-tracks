@@ -1,13 +1,10 @@
 #Release0
-#swap first and last names of Felicia Torres
-#split first and last names into two arrays, reverse method and join:
-spy = "Felicia Torres"
-spy.split(" ").reverse.join(" ")
 
 #change Felicia Torres to Vussit Gimodoe
 spy = "Felicia Torres"
+#split first and last names into two arrays, reverse method and join to flip first and last names:
 nspy = spy.split(" ").reverse.join(" ")
-#public method tr retruns copy with chacters in first method argument, by characters in the second.
+#public method tr retruns copy with characters in first method argument, by characters in the second.
 newvowl_nspy = nspy.tr('aeiou', 'eioua')
 p newvowl_nspy
 newconst_nspy = newvowl_nspy.tr('bcdfghjklmnpqrstvwxyz', 'cdfghjklmnpqrstvwxyzb')
