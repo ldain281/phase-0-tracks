@@ -2,7 +2,7 @@
 # Puppy energeticus
 
 # CHARACTERISTICS ----------------
-# Weight: varies
+# Weight: 5-15 lbs.
 # Friendly: yes
 # Eye count: 2
 # Leg count: 4
@@ -14,13 +14,15 @@
 
 # BEHAVIOR -----------------------
 # Fetch
+# Run
 # Pee
 # Poop
 # Scamper
 # Bark
 # Growl
+# Howl
 # Knaw
 # Drool
 # Eat
 # Sleep
-
+# Chase
