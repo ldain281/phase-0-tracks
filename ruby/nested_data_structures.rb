@@ -44,7 +44,8 @@ e_school = {
 			},
 		}	
 	}
-	p e_school[:other][:gym]
+	#New principal wants to know what staff do we have besides the teachers:
+	p e_school[:other]
 	#room 3 has a new teacher's assistant:
 	e_school[:classroom][:room3].update(:assistant=>'Mr. Helper')
 	p e_school[:classroom][:room3]
