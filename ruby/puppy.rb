@@ -11,6 +11,7 @@
 # Fur color: varies
 # Fur length: varies
 # Bark stength: varies
+# Fleas: unknown
 
 # BEHAVIOR -----------------------
 # Fetch
