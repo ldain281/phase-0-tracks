@@ -1,73 +1,83 @@
-#Release 1
 class Puppy
+
+  def initialize
+    puts "Initializing new puppy instance ..."
+  end
+
   def fetch(toy)
     puts "I brought back the #{toy}!"
     toy
   end
-end
-class Puppy
-  def speak(a)
-  puts "Woof!" * a
+
+  def speak(numb)
+    numb.times { puts "Woof!" }
   end
+
   def roll_over
     puts "*rolls over*"
   end
-  def dog_years(hy)
-  dy = hy / 7
-  puts dy
+
+  def dog_years(numb)
+    puts numb * 7
   end
-# time shaking in sec.
-  def shake(t)
-  puts "Puppy shakes #{t} seconds."
+
+  def shake
+    puts "*sticks out paw*"
   end
-   def initialize
-    puts "Initializing new puppy instance..."
-  end
-    def fetch(toy)
-    puts "I brought back the #{toy}!"
-    toy
-  end
+
 end
-fido = Puppy.new
-fido.fetch("ball")
-fido.speak(3)
-fido.roll_over
-fido.dog_years(30)
-fido.shake(10)
-#Release 2:
-class Cats
+
+Puppy.new.fetch("ball")
+Puppy.new.speak(3)
+Puppy.new.roll_over
+Puppy.new.dog_years(2)
+
+
+
+
+class Cars
+
   def initialize
-    puts "Initializing new cat instance ..."
+    puts "This is the initialize method."
+    @brands = ["Toyota", "Ford", "Honda", "Mercedes", "Fiat"]
   end
-  def purr
-    puts "Purrrr!"
+
+  def assign_car
+    @maker = @brands.sample
   end
-  def chasing_mouse(x)
-    puts "Cat chases #{x} mice."
+
+  def tire_turn(numb)
+    numb.times do
+      puts "The tire has turned #{numb} times!"
+    end
   end
-end
-#buster is an instance of the class Cats
-buster = Cats.new
-buster.chasing_mouse(3)
 
-cat_hash = {}
-def add_cats(x, hash)
-while x <= 50
-  a = Cats.new
-  hash[x] = a 
-  x += 1
-end
-end
-p add_cats(0, cat_hash)
+  def ignition
+    puts "Starting up the #{@maker}"
+  end
 
+  def direction(compass)
+    puts "Heading #{compass}"
+  end
 
-# Iterate over that data structure using .each and call the instance methods you wrote on each instance. So if you wrote a Gymnast class, this is where you'd call .flip and .jump on each of your instances of Gymnast.
-
-# to call instance methods written on each instance
-cat_hash.each do |cat_number, cat|
- p cat_number
- cat.chasing_mouse(1)
- cat.purr
 end
 
-p cat_hash
+
+
+toyota = Cars.new
+# toyota.direction("South")
+# toyota.assign_car
+
+
+car_arr = []
+
+50.times do
+cars = Cars.new
+car_arr << cars
+end
+car_arr.each do |car_inst|
+  car_inst.assign_car
+  car_inst.tire_turn(2)
+  car_inst.ignition
+end
+
