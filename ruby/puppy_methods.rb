@@ -36,12 +36,12 @@ Puppy.new.dog_years(2)
 
 
 class Cars
-
+# declare and initialize method
   def initialize
     puts "This is the initialize method."
     @brands = ["Toyota", "Ford", "Honda", "Mercedes", "Fiat"]
   end
-
+# randomly assign a make from the brands array
   def assign_car
     @maker = @brands.sample
   end
@@ -70,14 +70,16 @@ toyota = Cars.new
 
 
 car_arr = []
-
+#Release2.1 and 2.2: loop to make 50 class instances and store in an array
 50.times do
 cars = Cars.new
 car_arr << cars
 end
+#Release 2.3: iterate over data structure using .each and call instance methods
 car_arr.each do |car_inst|
   car_inst.assign_car
   car_inst.tire_turn(2)
   car_inst.ignition
+  car_inst.direction("North")
 end
 
