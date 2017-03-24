@@ -1,4 +1,4 @@
-#release1 simple module, note self keyword
+#release1 simple module, note self keyword necessary for module
 module Shout
 # 	def self.yell_angrily(words)
 # 		words + "!!!" + " :("
@@ -12,7 +12,7 @@ module Shout
 # puts Shout.yell_angrily("I am sooo angry")
 # puts Shout.yelling_happily("Whoo, hooo")
 
-#release2 Mixin, instance methods added two classes, note "include" Shout
+#release2 Mixin, instance methods added two classes, note "include Shout", no s"elf" keyword
 	def cuss(words)
 		puts "Get the #{words} out of my way!"
 	end
