@@ -1,30 +1,30 @@
 module Shout
 # 	def self.yell_angrily(words)
-# 		p words + "!!!" + " :("
+# 		words + "!!!" + " :("
 # 	end
 
 # 	def self.yelling_happily(words)
-# 		p words + "!!!" + " :)"
+# 		words + "!!!!" + " :)"
 # 	end
 # end
 
-# Shout.yell_angrily("I am sooo angry")
-# Shout.yelling_happily("Whoo, hooo")
+# puts Shout.yell_angrily("I am sooo angry")
+# puts Shout.yelling_happily("Whoo, hooo")
 	def cuss(words)
-	p "Get the #{words} out of my way."
+		puts "Get the #{words} out of my way!"
 	end
 end
 
-class Cabdriver
-	include Shout
-end
+	class Cabdriver
+		include Shout
+	end
 
-class Minivan
-	include Shout
+	class Minivan
+		include Shout
 	end
 
 cabdriver = Cabdriver.new
-cabdriver.cuss("fine car you have")
+cabdriver.cuss("mighty fine car you have")
 
 minivan = Minivan.new
 minivan.cuss("*@$@*$$X!!!")
