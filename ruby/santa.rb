@@ -1,5 +1,4 @@
 class Santa
-
 	#release3 refactor getters and setters
 		attr_reader :age, :ethnicity
 		attr_accessor :gender
@@ -29,9 +28,7 @@ class Santa
 		@reindeer_ranking.push(name)
 		@reindeer_ranking.delete_at(rank)
 		p @reindeer_ranking
-
 	end
-
 end
 
 #release 0
@@ -51,8 +48,6 @@ example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer n
 st_nick.celebrate_birthday(0)
 st_nick.get_mad_at("Vixen", 4)
 
-
-
 #release 4 santacom
 # Use our array of example genders and an array of example ethnicities
 # Set your new Santa's age to a random number between 0 and 140.
@@ -63,3 +58,4 @@ st_nick.get_mad_at("Vixen", 4)
     santas << Santa.new(example_genders.sample, example_ethnicities.sample, rand(122))
 end
 p santas
+

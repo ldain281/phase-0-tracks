@@ -1,21 +1,21 @@
-//7.1 Release4
-//create a function that reverses a string
-//split sting into array of separate letters,
-//reverse array
-//join reversed array and declare a variable
-//return reversed string
-//test with drive code
-//add conditional statment as per instuctions
-function reverseS(str) {
-var array = str.split("");
-array.reverse();
-var newrString = array.join("");
-return newrString;
+
+//create a function that takes a string as a paramater and reverses the string
+//for each string, split the string into characters, reverse the order and join
+//print to console
+
+function reverse(str) {
+var reversedStr = "";
+
+//loop backward reversed inde,x starting with last character of string
+for (var i = str.length - 1; i >=0 ; i--) {
+
+reversedStr += str[i];
+	}
+
 
 }
 
-
+//driver code
 if (1 == 1) {
-	console.log(reverseS("cats"));	} 
-else {console.log("dogs");
+console.log(reverse('painting'));
 }
