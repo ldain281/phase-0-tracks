@@ -1,4 +1,4 @@
-# Virus Predictor
+  # Virus Predictor
 
 # I worked on this challenge [by myself, with: ].
 # We spent [#] hours on this challenge.
@@ -85,3 +85,4 @@ alaska.virus_effects
 
 #=======================================================================
 # Reflection Section
+Contact GitHub API Training Shop Blog About
