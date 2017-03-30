@@ -1,57 +1,50 @@
-// array of four colors
-//Release 0
-var colors = ["blue", "red", "orange", "green"];
-var name = ["Ed", "Secratariat", "Black Beauty", "Horse with no name"];
-colors.push("white");
-name.push("Doratea");
+// Worked with Len Dain, Matt Mayerle
 
-//Release1
-function toObject(name, colors) {
-  var horses = {};
-  for (var i = 0; i < name.length; i++) {
-    var horse_name = name[i];
-    horses[horse_name] = colors[i]};
-};
-toObject(name, colors)
+//var color = ["red", "blue", "green", "yellow"];
+//var name = ["Ed", "George", "Linda", "Maria"];
 
+//color.push("orange");
 
-//Release2
-function Car(color, make, gas_type) {
-  console.log("Our new car:", this);
-  this.color = color;
-  this.make = make;
-  this.honk = function() { console.log("Honk!"); };
-  this.gas_type = function() {
-    if (gas_type == "gasoline") {
-      this.gas_type = gas_type;
-    }
-    else { 
-      console.log("That is not a real gas type!")
-    }
-  }
-  console.log("CAR INITIALIZATION COMPLETE");
+//name.push("Bob");
+
+//var horse = {color: "blue", name: "Linda"};
+
+//console.log("our horse is" + horse)
+
+//---Release 2---
+//Horses are great, but times are a-changin', and we need to add an option for faster transportation that we can create with an 
+//assembly line. At the bottom of your data_structures.js file, write a constructor function for a car. Give it a few 
+//different properties of various data types, including at least one function. Demonstrate that your function works by 
+//creating a few cars with it.
+
+var color = ["red", "black", "yellow", "blue"]
+var make = ["fiat", "ford", "gmc", "bmw"]
+var isManual = true
+var serialnumber = 2
+
+function Car(color, make, isManual, serialnumber) {
+
+    console.log("Our new car:", this);
+
+    this.color = color;
+    this.make = make;
+    this.isManual = isManual;
+    this.serialnumber = 2;
+
+    this.honk = function() {console.log("Beep! Beep!"); };
+    console.log("Car initialization complete");
 }
-console.log("Let's build a car ...");
-// Here is where we call that constructor function
-// that we just made ...
-var anotherCar = new Car("red", "Ford", "diesel");
+
+var anotherCar = new Car("red", "ford", true, 2);
 console.log(anotherCar);
-console.log("Our driver honks the horn:");
+console.log("This new car has a cool horn!");
 anotherCar.honk();
-console.log("----");
-console.log("Let's build a car ...");
-// Here is where we call that constructor function
-// that we just made ...
-var thirdCar = new Car("black", "Porsche", "gas");
-console.log(thirdCar);
-console.log("Our driver honks the horn:");
-anotherCar.honk();
-console.log("----");
-console.log("Let's build a car ...");
-// Here is where we call that constructor function
-// that we just made ...
-var fourthCar = new Car("white", "Chevy", "gas");
-console.log(fourthCar);
-console.log("Our driver honks the horn:");
-anotherCar.honk();
-console.log("----")
+console.log("-------------");
+
+var yetanotherCar = new Car("black", "gmc", true, 2);
+console.log(yetanotherCar.make);
+console.log("This new car is has a cool horn!");
+yetanotherCar.honk();
+console.log("-------------");
+
+//--------Release 3---------
