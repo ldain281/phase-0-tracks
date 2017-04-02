@@ -1,15 +1,19 @@
 // Worked with Len Dain, Matt Mayerle
 
-//var color = ["red", "blue", "green", "yellow"];
-//var name = ["Ed", "George", "Linda", "Maria"];
+var color = ["red", "blue", "green", "yellow"];
+var name = ["Ed", "George", "Linda", "Maria"];
 
-//color.push("orange");
+color.push("orange");
 
-//name.push("Bob");
+name.push("Bob");
+console.log(color);
+console.log(name);
 
-//var horse = {color: "blue", name: "Linda"};
+var horse = {color: "blue", name: "Linda"};
 
-//console.log("our horse is" + horse)
+console.log("Our horse is " + horse.color + " and named " + horse.name + "!");
+
+console.log("---------------------");
 
 //---Release 2---
 //Horses are great, but times are a-changin', and we need to add an option for faster transportation that we can create with an 
@@ -24,14 +28,14 @@ var serialnumber = 2
 
 function Car(color, make, isManual, serialnumber) {
 
-    console.log("Our new car:", this);
+   console.log("Our new car:", this);
 
-    this.color = color;
+   this.color = color;
     this.make = make;
     this.isManual = isManual;
     this.serialnumber = 2;
 
-    this.honk = function() {console.log("Beep! Beep!"); };
+   this.honk = function() {console.log("Beep! Beep!"); };
     console.log("Car initialization complete");
 }
 
