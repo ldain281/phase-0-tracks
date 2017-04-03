@@ -16,27 +16,70 @@
 # If win = congratulations, else lose = you lose
 # The user should get a congratulatory message if they win, and a taunting message if they lose.
 class Game
-attr_accessor :ans_word, :guess_word
+attr_reader :ans_word, :guess_word
 
 	def initialize(ans_word)
 		@ans_word = ans_word
-		@guess_word = nil
-		@num_guesses = 0
+		@guess_word = []
 		@guess = []
 		p @ans_word
 	end
-	def answer
-		@ans_word.split("")
+#this method will calculate number of letters in word and display empty spaces
+	def word_status
+		@ans_word.length.times do
+			@guess << "_"
+		end
+		puts "Guesser, your secret word has #{@ans_word.length} characters: #{@guess*""}"
+	end
+#this method will define the number of guesses the guesser will have
+	def word_length
+		@ans_word.length
+	end
+#this method will take in a guessed letter and place it into the guessed word character array
+	def guess_letter(letter)
+		if @ans_word.include?(letter)
+			i = @ans_word.index(letter)
+			@guess.insert(i, letter)
+			@guess.pop
+			puts "Good! You are getting closer: #{@guess*""}"
+		else
+			puts "sorry, guess again"
+		end
+	end
+	#this method will compare the guessed word to the answer word
+	def guessed_word(word)
+		if @ans_word == word
+			puts "You are a genious"
+		else
+			puts "guess again"
+			@guess_word.pop
+		end
 	end
 
-	
 end
-puts "Wordsmith, enter your secret word"
+# user interface
+puts "Wordsmith, enter your secret word for the Guesser:"
 game1 = Game.new(gets.chomp)
-game1.answer
+game1.word_status
+puts "You have #{game1.word_length} guesses to resolve the secret word"
+	x = game1.word_length
+	while x > 0
+puts "Would you like to guess a 'letter' or 'word'?"
+	if "letter" == gets.chomp
+		puts "Enter your letter:"
+		game1.guess_letter(gets.chomp)
+	else
+		puts "Enter your word guess:"
+		game1.guessed_word(gets.chomp)
+	end
+	  x = x-1
+	end
+	if guessed_word(word) == true
+		break
+	else
+		puts "Sorry, you used up all your guesses, you lost HAAAA!!"
+	end
 
 
 
 
- 	# @ans_word.split(" ")
- 	# @guess_word.split(" ")
