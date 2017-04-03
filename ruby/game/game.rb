@@ -16,24 +16,27 @@
 # If win = congratulations, else lose = you lose
 # The user should get a congratulatory message if they win, and a taunting message if they lose.
 class Game
-attr_accessor :ans_word, :guess_word
+attr_reader :ans_word, :guess_word
 
 	def initialize(ans_word)
 		@ans_word = ans_word
-		@guess_word = nil
+		@guess_word = []
 		@num_guesses = 0
 		@guess = []
 		p @ans_word
 	end
-	def answer
-		@ans_word.split("")
+	def word_status
+		@ans_word.length.times do
+			@guess_word << "_"
+		end
+		puts "Guesser, your secret word has #{@ans_word.length} characters: #{@guess_word*""}"
 	end
 
 	
 end
-puts "Wordsmith, enter your secret word"
+puts "Wordsmith, enter your secret word for the Guesser:"
 game1 = Game.new(gets.chomp)
-game1.answer
+game1.word_status
 
 
 
