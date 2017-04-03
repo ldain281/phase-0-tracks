@@ -32,4 +32,6 @@ function Valuepair(name)
 //builds and returns array of stings of given length
 //include driver code
 function length(x) {  
-	var }
+	var integer = x.length
+	var arr = new Array(x.length);
+}
