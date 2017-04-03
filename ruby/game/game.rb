@@ -25,19 +25,33 @@ attr_reader :ans_word, :guess_word
 		@guess = []
 		p @ans_word
 	end
+	#this method will calculate number of letters in word and display spaces
 	def word_status
 		@ans_word.length.times do
 			@guess_word << "_"
 		end
 		puts "Guesser, your secret word has #{@ans_word.length} characters: #{@guess_word*""}"
 	end
+#this method will take in a guessed letter and place it into the guessed word character array
+	def guess_letter(letter)
+		if @ans_word.include?(letter)
+			i = @ans_word.index(letter)
+			@guess_word.insert(i, letter)
+			@guess_word.pop
+			puts "You are getting closer: #{@guess_word*""}"
+		else
+			puts "sorry, guess again"
+		end
+	end
+	#this method will compare the guessed word to the answer word
 
 	
 end
 puts "Wordsmith, enter your secret word for the Guesser:"
 game1 = Game.new(gets.chomp)
 game1.word_status
-
+puts "Can you guess a letter in the word?"
+game1.guess_letter(gets.chomp)
 
 
 
