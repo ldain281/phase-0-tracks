@@ -1,0 +1,50 @@
+Release 2.1
+SELECT user_id,
+users."First name" AS User,
+reviews.stars AS Review,
+businesses.name AS Business
+FROM
+ users
+ INNER JOIN reviews ON reviews.user_id = users.id
+ INNER JOIN businesses ON businesses.id = reviews.business_id;
+
+output:
+1|Pitt|5|Grundy Hollow Wedding Chapel
+1|Pitt|3|Amir's Towing
+3|Kaling|5|Grundy Hollow Wedding Chapel
+3|Kaling|1|Grundy Hollow Wedding Chapel
+3|Kaling|5|The Beagle Nightclub
+
+Release 2.3
+SELECT user_id,
+users."First name", users."Last name" AS User,
+reviews.stars, reviews.comment AS Review,
+businesses.name AS Business
+FROM
+ users
+ INNER JOIN reviews ON reviews.user_id = users.id
+ INNER JOIN businesses ON businesses.id = reviews.business_id;
+
+ output:
+ 1|Bradford|Pitt|5|Great food!|Grundy Hollow Wedding Chapel
+1|Bradford|Pitt|3|OK|Amir's Towing
+3|Mandy|Kaling|5|Lovely view|Grundy Hollow Wedding Chapel
+3|Mandy|Kaling|1|Lovely view|Grundy Hollow Wedding Chapel
+3|Mandy|Kaling|5|Great music|The Beagle Nightclub
+
+ Release 2.3
+SELECT user_id,
+users."First name", users."Last name" AS User,
+reviews.stars, reviews.comment AS Review,
+businesses.name AS Business
+FROM
+ users
+ INNER JOIN reviews ON reviews.user_id = users.id
+ INNER JOIN businesses ON businesses.id = reviews.business_id
+ WHERE
+ businesses.id = 1;
+
+ output:
+ 1|Bradford|Pitt|5|Great food!|Grundy Hollow Wedding Chapel
+3|Mandy|Kaling|5|Lovely view|Grundy Hollow Wedding Chapel
+3|Mandy|Kaling|1|Lovely view|Grundy Hollow Wedding Chapel
