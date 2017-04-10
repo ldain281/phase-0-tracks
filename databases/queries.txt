@@ -1,0 +1,89 @@
+8.3 Release2 Execute SQL Queries
+
+1. SELECT * FROM books_read;
+
+1|The Accidental Universe|2017|false|1
+2|Bright, Precious Days|2017|true|2
+3|The Good Life|2016|true|2
+4|Brightness Falls|2016|true|2
+5|The Sword and the Stone|2017|true|3
+6|Beginning Ruby|2017|false|4
+7|Power Cues|2016|false|5
+8|The Curious Incident of the Dog in the Night-Time|2016|true|6
+
+2. UPDATE books_read SET year_read=2016 WHERE title="The Good Life";
+to verify:
+SELECT * FROM books_read WHERE title="The Good Life";
+3|The Good Life|2016|true|2
+
+3. SELECT * FROM books_read, authors WHERE books_read.author_id = authors.id;
+
+1|The Accidental Universe|2017|false|1|1|Alan Lightman
+2|Bright, Precious Days|2017|true|2|2|Jay McInerney
+3|The Good Life|2016|true|2|2|Jay McInerney
+4|Brightness Falls|2016|true|2|2|Jay McInerney
+5|The Sword and the Stone|2017|true|3|3|T.H. White
+6|Beginning Ruby|2017|false|4|4|Peter Cooper
+7|Power Cues|2016|false|5|5|Nick Morgan
+8|The Curious Incident of the Dog in the Night-Time|2016|true|6|6|Mark Haddon
+
+4. SELECT books_read.title, authors.name FROM books_read JOIN authors ON books_read.author_id = authors.id;
+
+The Accidental Universe|Alan Lightman
+Bright, Precious Days|Jay McInerney
+The Good Life|Jay McInerney
+Brightness Falls|Jay McInerney
+The Sword and the Stone|T.H. White
+Beginning Ruby|Peter Cooper
+Power Cues|Nick Morgan
+The Curious Incident of the Dog in the Night-Time|Mark Haddon
+
+5. DELETE FROM books_read WHERE title="The Sword and the Stone";
+to verify:
+SELECT * FROM books_read WHERE title="The Sword and the Stone";
+
+Release3: **research JOINS**
+example: CROSS JOIN: returns a combined result set with every row from books_read matched with every row from the authors:
+SELECT title, "fiction?" FROM books_read CROSS JOIN authors;
+The Accidental Universe|false
+The Accidental Universe|false
+The Accidental Universe|false
+The Accidental Universe|false
+The Accidental Universe|false
+The Accidental Universe|false
+Bright, Precious Days|true
+Bright, Precious Days|true
+Bright, Precious Days|true
+Bright, Precious Days|true
+Bright, Precious Days|true
+Bright, Precious Days|true
+The Good Life|true
+The Good Life|true
+The Good Life|true
+The Good Life|true
+The Good Life|true
+The Good Life|true
+Brightness Falls|true
+Brightness Falls|true
+Brightness Falls|true
+Brightness Falls|true
+
+example: INNER JOIN: (simple join): return the records where books_read and authors intersect.
+SELECT title, name FROM books_read INNER JOIN authors ON books_read.author_id = authors.id;
+The Accidental Universe|Alan Lightman
+Bright, Precious Days|Jay McInerney
+The Good Life|Jay McInerney
+Brightness Falls|Jay McInerney
+Beginning Ruby|Peter Cooper
+Power Cues|Nick Morgan
+The Curious Incident of the Dog in the Night-Time|Mark Haddon
+
+example: LEFT OUTER JOIN: all records from books_read and only those records from authors that intersect with books_read
+SELECT title, name,"fiction?" FROM books_read LEFT OUTER JOIN authors ON book
+The Accidental Universe|Alan Lightman|false
+Bright, Precious Days|Jay McInerney|true
+The Good Life|Jay McInerney|true
+Brightness Falls|Jay McInerney|true
+Beginning Ruby|Peter Cooper|false
+Power Cues|Nick Morgan|false
+The Curious Incident of the Dog in the Night-Time|Mark Haddon|true
