@@ -1,4 +1,4 @@
-#a program that creates a barcoded inventory of stuff using barby barcode gem
+#a program that creates a barcoded inventory of stuff using barby barcode and faker file name gems
 
 require 'sqlite3'
 require 'faker'
@@ -17,8 +17,8 @@ db.results_as_hash = true
 create_table_cmd = <<-SQL
   CREATE TABLE IF NOT EXISTS inventory(
     id INTEGER PRIMARY KEY,
-    barcode INT
-    file_name VARCHAR(255),
+    barcode INT,
+    file_name VARCHAR(255)
   )
 SQL
 
@@ -26,19 +26,19 @@ SQL
 db.execute(create_table_cmd)
 
 # add a test
-db.execute("INSERT INTO kittens (b_code, file_name) VALUES ('0978789778', 'book')")
+# db.execute("INSERT INTO inventory (barcode, file_name) VALUES ('0978789778', 'book')")
 
 
-# def create_inventory(db, barcode.to_ascii, file_name)
-#   db.execute("INSERT INTO inventory (barcode, file_name) VALUES (?, ?)", [barcode, file_name])
-# end
-
-# 1000.times do
-#   create_inventory(db, , Faker::File.file_name)
+def create_inventory(db, barcode, file_name)
+  db.execute("INSERT INTO inventory (barcode, file_name) VALUES (?, ?)", [barcode, file_name])
+end
+	#Barby::Code128B.barcode causes error
+# 10.times do
+#   create_inventory(db, Barby::Code128B.barcode, Faker::File.file_name)
 # end
 
 # explore ORM by retrieving data
-# kittens = db.execute("SELECT * FROM kittens")
-# kittens.each do |kitten|
-#  puts "#{kitten['name']} is #{kitten['age']}"
+# barcodes = db.execute("SELECT * FROM inventory")
+# inventory.each do |item|
+#  puts "#{item['barcode']} is #{item['file_name']}"
 # end
