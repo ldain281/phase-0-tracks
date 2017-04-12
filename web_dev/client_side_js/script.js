@@ -1,3 +1,5 @@
+//9.2 paired with Alex Hill
+
 function clickRed (event) {
 	console.log (event);
 	event.target.style.backgroundColor = "red";
